@@ -6,7 +6,9 @@ For this and over 400+ free scripts, visit http://javascriptkit.com
 */
 
 var trailLength = 8 // The length of trail (8 by default; put more for longer "tail")
-var path = "images/misc/space-satellite-0315.gif" // URL of your image
+var path = window.location.pathname.startsWith("/pages/")
+  ? "../images/misc/space-satellite-0315.gif"
+  : "images/misc/space-satellite-0315.gif"; // URL of your image
 
 var standardbody=(document.compatMode=="CSS1Compat")? document.documentElement : document.body //create reference to common "body" across doctypes
 var i,d = 0
