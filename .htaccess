@@ -1,13 +1,9 @@
 <!--
-Source - https://stackoverflow.com/a/48746996
-Posted by Amit Verma, modified by community. See post 'Timeline' for change history
-Retrieved 2026-06-05, License - CC BY-SA 3.0
+Source - https://stackoverflow.com/a/67503174
+Posted by naoval luthfi, modified by community. See post 'Timeline' for change history
+Retrieved 2026-06-05, License - CC BY-SA 4.0
 -->
 
- RewriteEngine on
- #redirect /file.html to /file
- RewriteCond %{THE_REQUEST} \s/([^.]+)\.html [NC]
- RewriteRule ^ /%1 [NE,L,R]
- # now we will internally map /file to/ file.html
- RewriteCond %{REQUEST_FILENAME}.html -f
- RewriteRule ^(.*)/?$ /$1.html  [L]
+{
+  "cleanUrls": true
+}
